@@ -40,7 +40,7 @@ class CustomFormField extends StatelessWidget {
           height: 20,
         ),
         TextFormField(
-          style: Theme.of(context).textTheme.bodyLarge,
+          style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white),
           obscureText: obscureText,
           controller: controller,
 
@@ -53,12 +53,14 @@ class CustomFormField extends StatelessWidget {
           validator: validator,
           maxLines: maxLines,
           cursorColor: Colors.amber,
+
           onFieldSubmitted: onSubmitted,
           decoration: InputDecoration(
             contentPadding: contentPadding,
             prefixIcon: icon,
             label: lable,
             hintText: hint,
+
             hintStyle: Theme.of(context)
                 .textTheme
                 .bodyLarge!
